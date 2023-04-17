@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+/* VARIABLES */
+
+:root {
+  --red: #fe4a49;
+  --white: #fff;
+  --black: #000;
+  --white-gray: #f7f7f7;
+  --blue-linkdIn: #0a66c2;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  height: 15%;
+}
+
+header h1 {
+  color: var(--red);
+  font-size: 1.25em;
+}
+
+header span {
+  color: var(--white);
+}
+
+header .menu-section nav {
+  display: none;
+}
+
+header .menu-section .menu-toggle {
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+header .menu-section .menu-toggle .one,
+.two,
+.three {
+  background: var(--red);
+  height: 5px;
+  width: 100%;
+  margin: 0.5rem;
+  transition-duration: 0.3s;
+}
+
+header .menu-section.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--black);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+header .menu-section.on nav {
+  display: block;
+  height: 100%;
+}
+
+header .menu-section.on nav .primary-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
+}
+
+header .menu-section.on .menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+header .menu-section.on .menu-toggle .one {
+  transform: rotate(45deg) translate(8px, 10px);
+}
+
+header .menu-section.on .menu-toggle .two {
+  opacity: 0;
+}
+
+header .menu-section.on .menu-toggle .three {
+  transform: rotate(-45deg) translate(8px, -11px);
+}
+
+header .menu-section .primary-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+header .primary-nav li a {
+  padding: 0.5rem;
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+header .primary-nav li a:hover {
+  color: var(--red);
+}
+
+/* SECTION DOWNLOAD */
+
+.section-div {
+  animation: initializer 0.7s forwards;
+  align-items: center;
+  padding: 1rem;
+  height: 85%;
+  width: 100%;
+  position: relative;
+}
+
+.section-div h2 {
+  font-size: 1.25rem;
+}
+
+.section-div .text {
+  color: var(--white);
+  display: grid;
+  gap: 1.5rem;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+.section-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-div .text h2 {
+  font-weight: 700;
+  color: var(--white-gray);
+}
+
+.section-div .text p {
+  font-weight: 300;
+  color: var(--white-gray);
+}
+
+.section-div .text a {
+  border: 2px solid var(--white);
+  color: var(--white-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11rem;
+  height: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: 0.8s;
+}
+
+.section-div .text a:hover {
+  background-color: var(--red);
+}
+
+.section-div .text .github:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.section-div .text .linkedIn:hover {
+  background-color: var(--blue-linkdIn);
+}
+
+/* PROJECTS */
+
+.portfolio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.portfolio h2 {
+  margin-top: 5%;
+  font-size: 1.25rem;
+  color: var(--red);
+}
+
+.portfolio p {
+  font-size: 1rem;
+  color: var(--white-gray);
+}
+
+.portfolio .projects {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.portfolio .projects .project {
+  width: 100%;
+  height: 28%;
+  background-color: red;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.portfolio .projects .project a {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .projects .project a img {
+  width: 100%;
+  height: 95%;
+  border-radius: 50%;
+  margin: 0.25rem;
+}
+
+.portfolio .projects .project .description {
+  background-color: #0a66c2;
+  padding: 0.25rem;
+}
+
+.portfolio .projects .project .description h2 {
+  font-size: 0.75rem;
+  color: var(--white-gray);
+}
+
+.portfolio .projects .project .description p {
+  font-size: 0.5rem;
+}
+
+.portfolio .projects .project .btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+}
+
+.portfolio .projects .project .btns a {
+  border: 2px solid var(--white);
+  color: var(--white-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 0.5rem;
+}
+
+.portfolio .projects .project .btns .github:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+.portfolio .projects .project .btns .access:hover {
+  background: var(--blue-linkdIn);
+}
+
+.portfolio .projects .carousel {
+  width: 100%;
+  height: 5%;
+  background-color: #0a66c2;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    align-items: flex-start;
+  }
+
+  .section-div .text {
+    position: initial;
+  }
+
+  .section-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+
+  .section-div .text h2 {
+    font-size: 1.25rem;
+  }
+
+  .section-div .text p {
+    font-size: 1rem;
+  }
+
+  .section-div .text a {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  header .menu-section .menu-toggle {
+    display: none;
+  }
+
+  header .menu-section nav {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header .primary-nav li a {
+    font-size: 1.5rem;
+  }
+
+  .section-div .text h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-div .text p {
+    font-size: 1.5rem;
+  }
+
+  .section-div .text a {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes initializer {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.toType:after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
