@@ -317,12 +317,11 @@ header .primary-nav li a:hover {
 .about {
   background: var(--light-black);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   justify-content: center;
   padding: 1rem;
   color: var(--white-gray);
-  margin-top: 3.75rem;
+  margin: 3.75rem 0;
   width: 100%;
 }
 
@@ -360,11 +359,14 @@ header .primary-nav li a:hover {
 
 .about .img {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about img {
   grid-row: 2;
-  max-width: 130px;
+  max-width: 80%;
   height: 200px;
   border-radius: 4px;
   filter: blur(0);
@@ -514,6 +516,7 @@ header .primary-nav li a:hover {
 
   .about {
     padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .about img {
