@@ -29,6 +29,7 @@ body {
   --black: #000;
   --white-gray: #f7f7f7;
   --blue-linkdIn: #0a66c2;
+  --light-black: #111;
 }
 
 /* HEADER */
@@ -201,7 +202,6 @@ header .primary-nav li a:hover {
 
 .portfolio {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,42 +223,45 @@ header .primary-nav li a:hover {
   width: 100%;
   height: 100%;
   padding: 0.5rem;
+  flex-direction: row;
 }
 
 .portfolio .projects .project {
   width: 100%;
   height: 28%;
-  background-color: red;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-around;
-  gap: 0.5rem;
 }
 
 .portfolio .projects .project a {
-  width: 100%;
+  width: 30%;
   height: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-right: 1rem;
 }
 
 .portfolio .projects .project a img {
   width: 100%;
-  height: 95%;
-  border-radius: 50%;
+  height: 100px;
+  border-radius: 100%;
   margin: 0.25rem;
 }
 
 .portfolio .projects .project .description {
-  background-color: #0a66c2;
   padding: 0.25rem;
+  width: 70%;
 }
 
 .portfolio .projects .project .description h2 {
   font-size: 0.75rem;
+  font-weight: 700;
   color: var(--white-gray);
 }
 
 .portfolio .projects .project .description p {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .portfolio .projects .project .btns {
@@ -295,7 +298,136 @@ header .primary-nav li a:hover {
 .portfolio .projects .carousel {
   width: 100%;
   height: 5%;
-  background-color: #0a66c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .projects .carousel span {
+  background: var(--red);
+  border: 2px solid var(--red);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* ABOUT */
+
+.about {
+  background: var(--light-black);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--white-gray);
+  margin-top: 3.75rem;
+  width: 100%;
+}
+
+.about .titleAbout {
+  margin: 1rem 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.about .titleAbout h2 {
+  font-size: 2rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.about .titleAbout p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about .titleAbout div {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.about .titleAbout div span {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.about .img {
+  width: 100%;
+}
+
+.about img {
+  grid-row: 2;
+  max-width: 130px;
+  height: 200px;
+  border-radius: 4px;
+  filter: blur(0);
+  animation: sideSection 0.6s ease-in-out forwards;
+}
+
+.about img:hover {
+  transition: 5s ease-in;
+  filter: blur(1px);
+}
+
+.about .contentAbout {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: upSection 0.6s ease-in-out forwards;
+}
+
+.about .contentAbout .textAbout {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about .contentAbout .textAbout h2 {
+  font-size: 1rem;
+  grid-column: 1/-1;
+}
+
+.about .contentAbout .textAbout h2::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 4rem;
+  background: var(--red);
+  margin: 0.25rem 0;
+}
+
+.about .contentAbout .textAbout p {
+  font-size: 0.75rem;
+  grid-row: 2;
+  grid-column: 1/-1;
+  margin-top: 0.5rem;
+}
+
+.about .contentAbout .infoAbout {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 1/-1;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about .contentAbout .infoAbout p i {
+  color: var(--red);
+  display: inline-block;
+  padding-right: 0.25rem;
+  font-size: 1rem;
+}
+
+.about .contentAbout .infoAbout p {
+  font-size: 0.75rem;
 }
 
 /* MEDIA QUERY */
@@ -343,6 +475,51 @@ header .primary-nav li a:hover {
   header .menu-section nav {
     display: block;
   }
+
+  .portfolio .projects .project {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio .projects .project a img {
+    height: 100%;
+  }
+
+  .portfolio .projects .project .description {
+    margin-left: 1rem;
+  }
+
+  .portfolio .projects .project .description h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio .projects .project .description p {
+    font-size: 1rem;
+  }
+
+  .portfolio .projects .project .btns {
+    margin-top: 1.5rem;
+  }
+
+  .portfolio .projects .project .btns a {
+    width: 8rem;
+    height: 2rem;
+    padding: 0.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .portfolio h2 {
+    font-size: 2rem;
+  }
+
+  .about {
+    padding: 2rem;
+  }
+
+  .about img {
+    max-width: 250px;
+    height: 80%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -367,6 +544,58 @@ header .primary-nav li a:hover {
     width: 15rem;
     height: 3rem;
     margin-top: 2rem;
+  }
+
+  .portfolio .projects .project .description h2 {
+    font-size: 2rem;
+  }
+
+  .portfolio .projects .project .description p {
+    font-size: 1.5rem;
+  }
+
+  .portfolio .projects .project .btns {
+    margin-top: 1.5rem;
+  }
+
+  .portfolio .projects .project .btns a {
+    width: 10rem;
+    height: 3.5rem;
+    padding: 0.25rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+
+  .portfolio h2 {
+    font-size: 2rem;
+  }
+
+  .about .contentAbout .textAbout h2 {
+    font-size: 2rem;
+  }
+
+  .about .contentAbout .textAbout p {
+    font-size: 1rem;
+  }
+
+  .about .img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .about .contentAbout .infoAbout p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .about .contentAbout .infoAbout p i {
+    font-size: 1.5rem;
+  }
+
+  .about .contentAbout .infoAbout p {
+    font-size: 1rem;
   }
 }
 
@@ -397,5 +626,27 @@ header .primary-nav li a:hover {
 
   to {
     opacity: 0;
+  }
+}
+
+@keyframes upSection {
+  from {
+    transition: 0.5s;
+    transform: translate3d(0, 60px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sideSection {
+  from {
+    transition: 0.5s;
+    transform: translate3d(-60px, 0px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
