@@ -7,7 +7,7 @@ Link:https://raphael-lima-portfolio.netlify.app/
 
 ## Minha aplicação:
 
-<img src="src/images/telainicial.png" />
+<img src="src/assets/img/capaGitHub.png" />
 
 ## Tecnologias utilizadas:
 
