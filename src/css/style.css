@@ -216,6 +216,8 @@ header .primary-nav li a:hover {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  background: var(--light-black);
+  margin: 1.75rem 0;
 }
 
 .portfolio h2 {
@@ -234,6 +236,11 @@ header .primary-nav li a:hover {
   height: 100%;
   padding: 0.5rem;
   flex-direction: row;
+  display: none;
+}
+
+.portfolio .projects.pjSelected {
+  display: block;
 }
 
 .portfolio .projects .project {
@@ -242,21 +249,24 @@ header .primary-nav li a:hover {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-around;
+  border: 2px solid var(--red);
+  padding: 0.25rem;
 }
 
 .portfolio .projects .project a {
   width: 30%;
-  height: 100%;
   cursor: pointer;
   position: relative;
-  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio .projects .project a img {
-  width: 100%;
-  height: 100px;
-  border-radius: 100%;
-  margin: 0.25rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 .portfolio .projects .project .description {
@@ -272,6 +282,7 @@ header .primary-nav li a:hover {
 
 .portfolio .projects .project .description p {
   font-size: 0.75rem;
+  text-align: left;
 }
 
 .portfolio .projects .project .btns {
@@ -305,7 +316,7 @@ header .primary-nav li a:hover {
   background: var(--blue-linkdIn);
 }
 
-.portfolio .projects .carousel {
+.portfolio .carousel {
   width: 100%;
   height: 5%;
   display: flex;
@@ -313,13 +324,19 @@ header .primary-nav li a:hover {
   align-items: center;
 }
 
-.portfolio .projects .carousel span {
+.portfolio .carousel span {
+  background: #ccc;
+  border: 2px solid #ccc;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-bottom: 1rem;
+}
+
+.portfolio .carousel .spanSelected {
   background: var(--red);
   border: 2px solid var(--red);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-right: 5px;
 }
 
 /* ABOUT */
@@ -646,10 +663,12 @@ header .primary-nav li a:hover {
 
   .portfolio .projects .project {
     margin-bottom: 3rem;
+    padding: 1rem;
   }
 
   .portfolio .projects .project a img {
-    height: 100%;
+    width: 150px;
+    height: 150px;
   }
 
   .portfolio .projects .project .description {
@@ -743,6 +762,11 @@ header .primary-nav li a:hover {
     margin-top: 2rem;
   }
 
+  .portfolio .projects .project a img {
+    width: 200px;
+    height: 200px;
+  }
+
   .portfolio .projects .project .description h2 {
     font-size: 2rem;
   }
@@ -765,6 +789,11 @@ header .primary-nav li a:hover {
 
   .portfolio h2 {
     font-size: 2rem;
+  }
+
+  .portfolio .projects .carousel span {
+    width: 16px;
+    height: 16px;
   }
 
   .about .contentAbout .textAbout h2 {

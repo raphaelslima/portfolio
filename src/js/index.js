@@ -40,3 +40,25 @@ function activeType(el) {
 }
 
 activeType(toType);
+
+/* CAROUSEL */
+
+const spans = document.querySelectorAll("#span");
+const projects = document.querySelectorAll(".projects");
+
+function spanToggle(span) {
+  document.querySelector(".spanSelected").classList.remove("spanSelected");
+  span.classList.add("spanSelected");
+}
+
+function toggleProjects(i) {
+  document.querySelector(".pjSelected").classList.remove("pjSelected");
+  projects[i].classList.add("pjSelected");
+}
+
+spans.forEach((span, i) => {
+  span.addEventListener("click", () => {
+    spanToggle(span);
+    toggleProjects(i);
+  });
+});

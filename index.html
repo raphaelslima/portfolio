@@ -45,7 +45,7 @@
             </li>
 
             <li>
-              <a href="#portfolio" class="link">Portifolio</a>
+              <a href="#portfolio" class="link">Portifólio</a>
             </li>
 
             <li>
@@ -97,9 +97,9 @@
     </section>
 
     <main>
-      <!-- <section class="portfolio" aria-label="Sessão Portfólio">
+      <section class="portfolio" aria-label="Sessão Portfólio" id="portfolio">
         <h2>Portfólio</h2>
-        <div class="projects">
+        <div class="projects pjSelected">
           <div class="project">
             <a
               href="https://raphael-lima-aiko-teste.netlify.app/"
@@ -114,8 +114,9 @@
             <div class="description">
               <h2>Redar de Equipamentos</h2>
               <p>
-                Case desenvolvido para uma empresa, consome a localização de
-                equipamentos de uma API.
+                localiza equipamentos consumindo dados de uma API. Além disso, é
+                possível se pesquisar e visualizar o histórico de status de um
+                deles.
               </p>
               <div class="btns">
                 <a
@@ -127,6 +128,7 @@
                 <a
                   href="https://raphael-lima-aiko-teste.netlify.app/"
                   class="access"
+                  target="_blank"
                   >Acessar</a
                 >
               </div>
@@ -141,18 +143,63 @@
             <div class="description">
               <h2>Pokedex</h2>
               <p>
-                Projeto que consome uma API externa para visualização dos dados
+                Projeto que consome uma API externa, além da visualização dos
+                dados é possível se pesquisar por nome e código.
               </p>
               <div class="btns">
-                <a href="https://github.com/raphaelslima/pokedex">GitHub</a>
-                <a href="https://pokedex-raphael-lima.netlify.app/">Acessar</a>
+                <a
+                  href="https://github.com/raphaelslima/pokedex"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <a
+                  href="https://pokedex-raphael-lima.netlify.app/"
+                  target="_blank"
+                  >Acessar</a
+                >
               </div>
             </div>
           </div>
 
           <div class="project">
             <a
-              href="https://app.netlify.com/sites/raphael-lima-nodeprop/overview"
+              href="https://algashopping-raphael-lima.netlify.app"
+              target="_blank"
+            >
+              <img
+                src="./src/assets/img/carrinhoDeCompras.png"
+                alt="Carinho de compras"
+              />
+            </a>
+
+            <div class="description">
+              <h2>Carinho de Compras</h2>
+              <p>
+                Aplicação que simula um carrinho de compras de um ecommerce, foi
+                desenvolvido com ReactJS e Redux.
+              </p>
+              <div class="btns">
+                <a
+                  href="https://github.com/raphaelslima/algaShopping"
+                  target="_blank"
+                  class="github"
+                  >GitHub</a
+                >
+                <a
+                  href="https://algashopping-raphael-lima.netlify.app"
+                  target="_blank"
+                  class="access"
+                  >Acessar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project">
+            <a
+              href="https://github.com/raphaelslima/design-responsive-nodeProp"
               target="_blank"
             >
               <img src="./src/assets/img/ladingPage.png" alt="Lading Page" />
@@ -160,71 +207,29 @@
             <div class="description">
               <h2>Lading Page</h2>
               <p>
-                Site Lading , 100% responsivo, construido usando mobile first em
-                seu desenvolvimento.
+                Lading Page 100% responsiva, densenvolvida usando a tecníca
+                mobile first.
               </p>
               <div class="btns">
                 <a
                   href="https://github.com/raphaelslima/design-responsive-nodeProp"
+                  target="_blank"
                   >GitHub</a
                 >
                 <a
-                  href="https://app.netlify.com/sites/raphael-lima-nodeprop/overview"
+                  href="https://raphael-lima-nodeprop.netlify.app"
+                  target="_blank"
                   >Acessar</a
                 >
               </div>
             </div>
           </div>
-
-          <div class="carousel">
-            <span></span>
-            <span></span>
-          </div>
         </div>
-      </section> -->
 
-      <section aria-label="Seãoç sobre mim" class="sectionAbout" id="about">
-        <article class="about" id="about">
-          <div class="titleAbout">
-            <h2>Sobre Mim</h2>
-            <p>Um pouco sobre minha trajetória.</p>
-            <div aria-label="Seção de ilustração de botões">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div class="img">
-            <img
-              src="./src/assets/img/photoAboutMe.png"
-              alt="Imagem de Raphael Lima"
-            />
-          </div>
-
-          <div class="contentAbout">
-            <div class="textAbout">
-              <h2>Eu sou Raphael Lima</h2>
-              <p>
-                Acredito que a chave para se tornar um bom programador é ser
-                apaixonado em resolver problemas, ter muita proatividade,
-                dinamismo e agilidade para se adaptar a diversos cenários e a
-                modelos de soluções novas e mais eficientes, além de claro,
-                desejo de estar sempre aprendendo e evoluindo, estudo contínuo e
-                trocas de conhecimentos com sua equipe e rede.
-              </p>
-            </div>
-            <div class="infoAbout">
-              <p>
-                <i class="fa-solid fa-calendar-days"></i>Data de Aniversário: 02
-                Julho 1998
-              </p>
-              <p>
-                <i class="fa-solid fa-location-dot"></i>Endereço: Belo
-                Horizonte, Brasil
-              </p>
-            </div>
-          </div>
-        </article>
+        <div class="carousel">
+          <span class="spanSelected" id="span"></span>
+          <span id="span"></span>
+        </div>
       </section>
 
       <section
@@ -283,6 +288,50 @@
             <h2>GIT</h2>
           </div>
         </div>
+      </section>
+
+      <section aria-label="Seção sobre mim" class="sectionAbout" id="about">
+        <article class="about" id="about">
+          <div class="titleAbout">
+            <h2>Sobre Mim</h2>
+            <p>Um pouco sobre minha trajetória.</p>
+            <div aria-label="Seção de ilustração de botões">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="img">
+            <img
+              src="./src/assets/img/photoAboutMe.png"
+              alt="Imagem de Raphael Lima"
+            />
+          </div>
+
+          <div class="contentAbout">
+            <div class="textAbout">
+              <h2>Eu sou Raphael Lima</h2>
+              <p>
+                Acredito que a chave para se tornar um bom programador é ser
+                apaixonado em resolver problemas, ter muita proatividade,
+                dinamismo e agilidade para se adaptar a diversos cenários e a
+                modelos de soluções novas e mais eficientes, além de claro,
+                desejo de estar sempre aprendendo e evoluindo, estudo contínuo e
+                trocas de conhecimentos com sua equipe e rede.
+              </p>
+            </div>
+            <div class="infoAbout">
+              <p>
+                <i class="fa-solid fa-calendar-days"></i>Data de Aniversário: 02
+                Julho 1998
+              </p>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>Endereço: Belo
+                Horizonte, Brasil
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
     <footer class="contact" aria-label="Seção de contato" id="contact">
