@@ -245,12 +245,12 @@ header .primary-nav li a:hover {
 
 .portfolio .projects .project {
   width: 100%;
-  height: 28%;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 2px solid var(--red);
-  padding: 0.25rem;
+  padding: 1rem 0.25rem;
+  border-radius: 8px;
 }
 
 .portfolio .projects .project a {
@@ -287,7 +287,7 @@ header .primary-nav li a:hover {
 
 .portfolio .projects .project .btns {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-end;
   margin-top: 0.5rem;
 }
@@ -299,12 +299,12 @@ header .primary-nav li a:hover {
   justify-content: center;
   align-items: center;
   width: 4rem;
-  height: 1.5rem;
+  height: 2rem;
   padding: 0.25rem;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.8s;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .portfolio .projects .project .btns .github:hover {
