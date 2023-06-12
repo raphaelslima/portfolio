@@ -486,67 +486,14 @@ header .primary-nav li a:hover {
   width: 90%;
 }
 
-.technologies .allTechnologies .technology {
-  border: 2px solid var(--red);
-  justify-content: center;
-  align-items: center;
-  background: var(--light-black);
-  margin-bottom: 1rem;
-  width: 100%;
-}
-
-.technologies .allTechnologies .technology h2 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: var(--red);
-}
-
-.technologies .allTechnologies .technology .icon {
+.technologies .allTechnologies .itemTec {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 1rem;
 }
 
-.technologies .allTechnologies .technology .icon img {
-  width: 80%;
-}
-
-.technologies .allTechnologies .technology .icon i {
-  color: var(--red);
-  font-size: 200px;
-}
-
-.technologies .allTechnologies .technology .icon .js {
-  color: #edd717;
-}
-
-.technologies .allTechnologies .technology .icon .css {
-  color: #2091eb;
-}
-
-.technologies .allTechnologies .technology .icon .html {
-  color: #dd4b25;
-}
-
-.technologies .allTechnologies .technology .icon .reactjs {
-  color: #5ed3f3;
-}
-
-.technologies .allTechnologies .technology .icon .nodejs {
-  color: #85c145;
-}
-
-.technologies .allTechnologies .technology .icon .database {
-  color: #e3a300;
-}
-
-.technologies .allTechnologies .technology .icon .git {
-  color: #e84d31;
-}
-
-.technologies .allTechnologies .technology h2 {
-  text-align: center;
+.technologies .allTechnologies .itemTec .colorStart {
+  color: #fe4a49;
 }
 
 /* CONTACT */
@@ -710,13 +657,7 @@ header .primary-nav li a:hover {
   }
 
   .technologies .allTechnologies {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .technologies .allTechnologies .technology {
-    height: 260px;
+    padding: 2rem 5rem;
   }
 
   .contact .contactContent {
@@ -828,20 +769,8 @@ header .primary-nav li a:hover {
     font-size: 2rem;
   }
 
-  .technologies .allTechnologies .technology h2 {
-    font-size: 1.5rem;
-  }
-
-  .technologies .allTechnologies .technology {
-    height: 300px;
-  }
-
-  .technologies .allTechnologies .technology .icon img {
-    width: 70%;
-  }
-
-  .technologies .allTechnologies .technology h2 {
-    margin-top: 1.25rem;
+  .technologies .allTechnologies {
+    padding: 2rem 8rem;
   }
 
   .contact h2 {
