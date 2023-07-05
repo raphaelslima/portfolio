@@ -665,20 +665,6 @@ header .primary-nav li a:hover {
     padding: 2rem 5rem;
   }
 
-  .contact .contactContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    max-height: 200px;
-  }
-
-  .contact .contactContent .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
   .contact .contactContent .copyright {
     margin-top: 2rem;
   }
