@@ -275,7 +275,7 @@ header .primary-nav li a:hover {
 }
 
 .portfolio .projects .project .description h2 {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--white-gray);
   text-align: center;
@@ -285,13 +285,13 @@ header .primary-nav li a:hover {
 .portfolio .projects .project .description p {
   font-size: 0.75rem;
   text-align: left;
-  display: none;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .portfolio .projects .project .description p:nth-child(3){
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .portfolio .projects .project .btns {
