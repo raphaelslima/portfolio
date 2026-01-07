@@ -5,10 +5,6 @@ Portfólio Raphael Lima.
 <br/>
 Link: https://raphael-lima-portfolio.netlify.app/
 
-## Minha aplicação:
-
-<img src="src/assets/img/capaGitHub.png" />
-
 ## Tecnologias utilizadas:
 
 <ul>
