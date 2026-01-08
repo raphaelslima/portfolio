@@ -139,11 +139,10 @@ header .primary-nav li a:hover {
 
 .section-div {
   animation: initializer 0.7s forwards;
-  align-items: center;
   padding: 1rem;
-  height: 80vh;
   width: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-div h2 {
@@ -154,16 +153,8 @@ header .primary-nav li a:hover {
   color: var(--white);
   display: grid;
   gap: 1.5rem;
-  position: absolute;
   top: 5%;
   left: 10%;
-}
-
-.section-div img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  margin-top: -20px;
 }
 
 .section-div .text h2 {
@@ -174,6 +165,14 @@ header .primary-nav li a:hover {
 .section-div .text p {
   font-weight: 300;
   color: var(--white-gray);
+}
+
+.section-div .btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-div .text a {
@@ -206,6 +205,14 @@ header .primary-nav li a:hover {
 
 .section-div .text .linkedIn:hover {
   background-color: var(--blue-linkdIn);
+}
+
+.profile-img {
+  margin-bottom: 25px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* PROJECTS */
@@ -289,7 +296,7 @@ header .primary-nav li a:hover {
   margin-left: 1rem;
 }
 
-.portfolio .projects .project .description p:nth-child(3){
+.portfolio .projects .project .description p:nth-child(3) {
   display: block;
   text-align: left;
 }
@@ -585,16 +592,16 @@ header .primary-nav li a:hover {
     align-items: flex-start;
   }
 
-  .section-div .text {
-    position: initial;
+  .section-div .btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
   }
 
-  .section-div img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    margin-right: 1rem;
-    margin-top: 0px;
+  .section-div .text {
+    position: initial;
   }
 
   .section-div .text h2 {
@@ -645,7 +652,7 @@ header .primary-nav li a:hover {
     display: block;
   }
 
-  .portfolio .projects .project .description p:nth-child(3){
+  .portfolio .projects .project .description p:nth-child(3) {
     text-align: left;
   }
 
